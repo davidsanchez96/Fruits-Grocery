@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import Images from '../assets/images';
+import { Images } from 'utils';
 import Dash from 'react-native-dash';
 
 const { width, height } = Dimensions.get('window');

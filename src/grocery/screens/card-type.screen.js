@@ -9,8 +9,8 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import Images from '../../assets/images';
-import { Header } from '../../components';
+import { Images } from 'utils';
+import { Header } from 'components';
 
 // create a component
 export class CardTypeScreen extends Component {

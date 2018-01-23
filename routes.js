@@ -6,7 +6,7 @@ import {
   CardNumberScreen,
   CardTypeScreen,
   ConfirmationScreen
-} from './src/grocery';
+} from 'grocery';
 import { FontAwesome } from '@expo/vector-icons';
 
 export const GroceryApp = TabNavigator(

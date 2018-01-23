@@ -11,7 +11,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { FruitList, Fruit, IconBadge } from '../../components';
+import { FruitList, Fruit, IconBadge } from 'components';
 
 const { width, height } = Dimensions.get('window');
 
