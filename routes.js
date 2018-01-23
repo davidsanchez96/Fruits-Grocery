@@ -1,49 +1,50 @@
-import React from "react";
-import { TabNavigator } from "react-navigation";
+import React from 'react';
+import { TabNavigator } from 'react-navigation';
 import {
   FruitsScreen,
   CardDateScreen,
   CardNumberScreen,
   CardTypeScreen,
   ConfirmationScreen
-} from "./src/grocery";
-import { FontAwesome } from "@expo/vector-icons";
+} from './src/grocery';
+import { FontAwesome } from '@expo/vector-icons';
 
 export const GroceryApp = TabNavigator(
   {
     Fruits: {
       screen: FruitsScreen
     },
-    CardDate: {
-      screen: CardDateScreen
+    CardType: {
+      screen: CardTypeScreen
     },
     CardNumber: {
       screen: CardNumberScreen
     },
-    CardType: {
-      screen: CardTypeScreen
+    CardDate: {
+      screen: CardDateScreen
     },
     Confirmation: {
       screen: ConfirmationScreen
     }
   },
   {
-    tabBarPosition: "bottom",
+    initialRouteName: 'CardType',
+    tabBarPosition: 'bottom',
     tabBarOptions: {
       showLabel: false,
       style: {
-        backgroundColor: "#FFFFFF"
+        backgroundColor: '#FFFFFF'
       }
     },
     ...TabNavigator.Presets.iOSBottomTabs,
     navigationOptions: {
       tabBarIcon: ({ focused }) => {
-        let iconName = "square";
+        let iconName = 'square';
         return (
           <FontAwesome
             name={iconName}
             size={30}
-            color={focused ? "#83DBB0" : "#EFEFEF"}
+            color={focused ? '#83DBB0' : '#EFEFEF'}
           />
         );
       }

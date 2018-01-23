@@ -14,7 +14,7 @@ import Dash from 'react-native-dash';
 const { width, height } = Dimensions.get('window');
 
 // create a component
-export const Fruit = ({ item }) => {
+export const Fruit = ({ item, onItemSelected }) => {
   return (
     <View style={styles.row}>
       <Text style={styles.title} numberOfLines={1}>
@@ -30,7 +30,7 @@ export const Fruit = ({ item }) => {
       </View>
       <View style={styles.priceSection}>
         <Text style={styles.price}>{item.description}</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onItemSelected}>
           <View style={styles.addCart}>
             <Text style={styles.plusText}>+</Text>
           </View>
@@ -70,13 +70,13 @@ const styles = StyleSheet.create({
   },
   image: {
     width: null,
-    height: 120,
+    height: 60,
     resizeMode: 'contain',
     marginBottom: 10
   },
   title: {
     fontSize: 22,
-    fontFamily: 'varelaround-regular',
+    fontFamily: 'frederic-black',
     alignSelf: 'center',
     color: '#3E4952',
     marginTop: 10
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   price: {
     flex: 1,
     fontSize: 18,
-    fontFamily: 'frederic-black',
+    fontFamily: 'varelaround-regular',
     alignSelf: 'center',
     color: '#3E4952',
     marginLeft: 10,
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden'
   },
   imageWrapper: {
-    marginHorizontal: 20,
+    marginHorizontal: 30,
     marginVertical: 10
   },
   addCart: {

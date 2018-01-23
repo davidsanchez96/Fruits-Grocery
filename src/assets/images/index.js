@@ -4,5 +4,8 @@ export default {
   cherry: require('./Cherry.png'),
   orange: require('./Orange.png'),
   strawberry: require('./Strawberry.png'),
-  watermelon: require('./Watermelon.png')
+  watermelon: require('./Watermelon.png'),
+  mastercard: require('./mastercard.png'),
+  visa: require('./visa.png'),
+  amex: require('./amex.png')
 };
